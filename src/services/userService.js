@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../models/User');
 
 exports.saveUser = async (user) => {
     const normalizedUserName = user.name.toLowerCase();

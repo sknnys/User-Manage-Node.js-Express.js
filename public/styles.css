@@ -44,7 +44,7 @@ h1 {
     border-color: #9c27b0;
 }
 
-#user-name {
+#login-name {
     border-radius: 4px;
     border: 1px solid #333;
     background-color: #1e1e1e;
@@ -52,7 +52,7 @@ h1 {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-#user-name:focus {
+#login-name:focus {
     border-color: #bb86fc;
     box-shadow: 0 0 0 0.2rem rgba(187, 134, 252, 0.25);
 }

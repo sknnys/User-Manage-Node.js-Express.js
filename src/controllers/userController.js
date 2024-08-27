@@ -1,4 +1,5 @@
 const UserService = require('../services/userService');
+const AuthService = require('../services/authService');
 
 exports.createUser = async (req, res) => {
     try {
@@ -32,6 +33,16 @@ exports.deleteUser = async (req, res) => {
     try {
         const userId = req.params.id;
         const result = await UserService.deleteUserById(userId);
+        res.status(result.status).json(result.message);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+exports.loginUser = async (req, res) => {
+    try {
+        const { name } = req.body;
+        const result = await AuthService.authenticateUser(name);
         res.status(result.status).json(result.message);
     } catch (error) {
         res.status(500).json({ message: error.message });
