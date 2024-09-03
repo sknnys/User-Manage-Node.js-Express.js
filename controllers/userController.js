@@ -1,13 +1,14 @@
 const { SupabaseClient } = require('@supabase/supabase-js');
 
 exports.createUser = async (req, res, supabase) => {
-    const normalizedUserName = req.body.name.toLowerCase();
+    const normalizedUserName = req.body.name.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
     try {
         const { data: users, error: selectError } = await supabase
             .from('app_user')
             .select('*')
-            .eq('name', normalizedUserName);
+            .ilike('name', normalizedUserName)
+            .order('created_at', { ascending: false });
 
         if (selectError) throw selectError;
 

@@ -71,7 +71,8 @@
         }
 
         async function removeUser(userId) {
-            if (removingUserIds.has(userId)) return; // Não faz nada se o usuário já está sendo removido
+            if (removingUserIds.has(userId)) 
+                return; // Não faz nada se o usuário já está sendo removido
 
             removingUserIds.add(userId); // Marca o usuário como removido
             try {
