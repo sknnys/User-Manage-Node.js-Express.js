@@ -22,7 +22,7 @@ exports.createUser = async (req, res, supabase) => {
 
         const { data: newUser, error: insertError } = await supabase
             .from('app_user')
-            .insert([{ name: normalizedUserName }])
+            .insert([{ name: normalizedUserName, active: true }])
             .single();
 
         if (insertError) throw insertError;

@@ -19,6 +19,11 @@ if (!supabaseUrl || !supabaseKey) {
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+
+
+
+
+
 // Middleware
 app.use(bodyParser.json());
 
