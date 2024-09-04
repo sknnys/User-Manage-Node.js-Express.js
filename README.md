@@ -39,7 +39,7 @@ Supabase (PostgreSQL)
 Clone o repositório:
 
 ```bash
-  git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+  git clone https://github.com/sknnys/User-Manage-Node.js-Express.js
   cd SEU_REPOSITORIO
 ```
 
