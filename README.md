@@ -39,8 +39,8 @@ Supabase (PostgreSQL)
 Clone o repositório:
 
 ```bash
-  git clone https://github.com/seuUser/SeuRepositorio
-  cd SEU_REPOSITORIO
+  git clone https://github.com/sknnys/User-Manage-Node.js-Express.js
+  cd User-Manage-Node.js-Express.js
 ```
 
 Instale as dependências:
